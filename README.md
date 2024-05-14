@@ -137,7 +137,7 @@ cmd: `regsvr32 /u "you path/ExplorerBlurMica.dll"` (run as administrator)
 
 #
 
-## Config (for who don't want to use GUI)
+## Config
 ``` ini
 [config]
 #Effect type 0=Blur 1=Acrylic 2=Mica 3=Blur(Clear) 4=MicaAlt
