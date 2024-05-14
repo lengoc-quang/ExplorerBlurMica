@@ -176,6 +176,10 @@ Save the configuration after modification and reopen the File Explorer window to
 > If something happens that crashes Explorer, press and hold the `ESC` key to open Explorer and uninstall the program or run this command with administrator privileges: `taskkill explorer.exe && regsvr32 /u "you path/ExplorerBlurMica.dll" && explorer.exe`.
 > This will remove ExplorerBlurMica and restart Explorer.
 
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=Maplespe/ExplorerBlurMica&type=Date)](https://star-history.com/#Maplespe/ExplorerBlurMica&Date)
+
 ## Other
 The GUI running on Python.
 Dependent on [minhook](https://github.com/m417z/minhook) and [customtkinter](https://github.com/TomSchimansky/CustomTkinter).
