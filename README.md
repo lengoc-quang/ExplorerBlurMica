@@ -23,7 +23,7 @@ This project is for Explorer only, if you want to apply the effect globally, tak
 Compatible with StartAllBack, OldNewExplorer and other software that modifies window styles.
 
 It is also compatible with third-party themes.
-
+If you have any issues, please report it in `**Issue**` tab.
 ## Catalog
 - [Overview](#overview)
 - [How to use](#how-to-use)
@@ -113,27 +113,34 @@ a=200
 ## How to use
 
 ### Install
+#### Download program with GUI
+1. Download the program from the [Release](https://github.com/lengoc-quang/ExplorerBlurMica/releases) page.
+   Remember to download GUI with binary, or download the binary [here](https://github.com/Maplespe/ExplorerBlurMica/releases).
+3. Unzip it to a location such as "`C:\Program Files`".
+4. Run `ExplorerBlurMica_GUI.exe` and install the program. You can tweak anything you want here.
+5. Reopen the Explorer window to take effect.
+#### Download program only
 1. Download the compiled program archive from the [Release](https://github.com/Maplespe/ExplorerBlurMica/releases) page.
 2. Unzip it to a location such as "`C:\Program Files`".
-3. Run "`register.cmd`" as administrator.
-4. Reopen the Explorer window to take effect.
+   Or if you downloaded GUI before, just unzip it in `src` folder and run `ExplorerBlurMica_GUI.exe`.
+3. Edit `config.ini` files (if you don't use GUI).
+4. Run "`register.cmd`".
+5. Reopen the Explorer window to take effect.
 
-cmd: `regsvr32 "you path/ExplorerBlurMica.dll"`
+cmd: `regsvr32 "you path/ExplorerBlurMica.dll"` (run as administrastor)
 
 ### Uninstall
 1. Run "`uninstall.cmd`" as administrator.
 2. Delete the remaining files.
 
-cmd: `regsvr32 /u "you path/ExplorerBlurMica.dll"`
+cmd: `regsvr32 /u "you path/ExplorerBlurMica.dll"` (run as administrator)
 
 #
-Note: If something happens that crashes Explorer, press and hold the `ESC` key to open Explorer and uninstall the program.
 
-## Config
+## Config (for who don't want to use GUI)
 ``` ini
 [config]
 #Effect type 0=Blur 1=Acrylic 2=Mica 3=Blur(Clear) 4=MicaAlt
-#Blur is only available until win11 22h2, Blur (Clear) is available in both win10 and win11, Mica is win11 only.
 effect=1
 #Clear the background of the address bar.
 clearAddress=true
@@ -161,6 +168,13 @@ a=120
 ```
 
 Save the configuration after modification and reopen the File Explorer window to take effect.
+
+## Note
+- Blur effect isn't available for Windows 11.
+- Mica and Mica Alt effect isn't avaiable for Windows 10.
+> [!IMPORTANT]
+> If something happens that crashes Explorer, press and hold the `ESC` key to open Explorer and uninstall the program or run this command with administrator privileges: `taskkill explorer.exe && regsvr32 /u "you path/ExplorerBlurMica.dll" && explorer.exe`.
+> This will remove ExplorerBlurMica and restart Explorer.
 
 ## Other
 The GUI running on Python.
